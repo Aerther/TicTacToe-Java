@@ -75,6 +75,7 @@ public class Game {
 		this.board.get(row).set(col, this.letters[this.activePlayer]);	
 	}
 	
+	// Checks if the move is valid
 	public boolean isMoveValid(int row, int col) {
 		return this.board.get(row).get(col).equals(" ");
 	}
