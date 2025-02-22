@@ -13,7 +13,7 @@ public class Game {
 			};
 	private final String[] letters = {"X", "O"};
 	private int[] score = {0, 0};
-	private int activePlayer = 0; // Represent who is the player in the moment
+	private int activePlayer = 0;
 	private int startPlayer = 0;
 	private int turns = 0;
 	private boolean restartGame = false;
@@ -86,6 +86,7 @@ public class Game {
 		return this.board.get(row).get(col);
 	}
 	
+	// Restart all of the game
 	public void restartGame() {
 		this.initializeBoard();
 		this.restartGame = false;
@@ -94,6 +95,7 @@ public class Game {
 		this.turns = 0;
 	}
 	
+	// Restart the score
 	public void restartScore() {
 		int[] restartScore = {0, 0};
 		this.score = restartScore;
