@@ -24,27 +24,13 @@ public class Game {
 		this.initializeBoard();
 	}
 	
-	public int[] getScore() {
-		return this.score;
-	}
-	
-	public void setRestartGame(boolean bool) {
-		this.restartGame = bool;
-	}
-	
-	public boolean getRestartGame() {
-		return this.restartGame;
-	}
-	
+	// Updates the active player and the turns
 	public void updateGame() {
 		this.activePlayer = (this.activePlayer == 0) ? 1 : 0;
 		this.turns++;
 	}
 	
-	public int getActivePlayer() {
-		return this.activePlayer;
-	}
-	
+	// Initialize every space of the board with a space
 	private void initializeBoard() {
 		this.board.clear();
 		for (int i = 0; i < 3; i++) {
@@ -58,6 +44,7 @@ public class Game {
 		}
 	}
 	
+	// Checks for a win
 	public boolean isWinner() {
 		int countLetters;
 		for (int i = 0; i < this.casesWin.length; i++) {
@@ -79,6 +66,7 @@ public class Game {
 		return false;
 	}
 	
+	// Checks for a drawn
 	public boolean isDrawn() {
 		return this.turns == 8;
 	}
@@ -91,6 +79,7 @@ public class Game {
 		return this.board.get(row).get(col).equals(" ");
 	}
 	
+	// Get the char that is inside a position in the board
 	public String getBoardPosition(int row, int col) {
 		return this.board.get(row).get(col);
 	}
@@ -108,7 +97,24 @@ public class Game {
 		this.score = restartScore;
 	}
 	
+	// Getters and Setters
 	public void setActivePlayer(int num) {
 		this.activePlayer = num;
+	}
+	
+	public int getActivePlayer() {
+		return this.activePlayer;
+	}
+
+	public int[] getScore() {
+		return this.score;
+	}
+	
+	public void setRestartGame(boolean bool) {
+		this.restartGame = bool;
+	}
+	
+	public boolean getRestartGame() {
+		return this.restartGame;
 	}
 }
