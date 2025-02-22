@@ -1,4 +1,5 @@
 import java.awt.Font;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -22,8 +23,9 @@ public class TicTacToeGUI extends JFrame implements ActionListener {
 	private ArrayList<JButton> buttons = new ArrayList<JButton>();
 	
 	public TicTacToeGUI() {
-		super("TicTacToe Game");
+		super("Tic-Tac-Toe");
 		setSize(Constants.WINDOW_WIDTH, Constants.WINDOW_HEIGHT);
+		setIconImage(Toolkit.getDefaultToolkit().getImage(TicTacToeGUI.class.getResource("/hashtag.png")));
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
         setLocationRelativeTo(null);
