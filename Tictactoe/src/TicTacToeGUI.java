@@ -25,7 +25,7 @@ public class TicTacToeGUI extends JFrame implements ActionListener {
 	public TicTacToeGUI() {
 		super("Tic-Tac-Toe");
 		setSize(Constants.WINDOW_WIDTH, Constants.WINDOW_HEIGHT);
-		setIconImage(Toolkit.getDefaultToolkit().getImage(TicTacToeGUI.class.getResource("/hashtag.png")));
+		setIconImage(ImageUtils.getImage("hashtag.png"));
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
         setLocationRelativeTo(null);
