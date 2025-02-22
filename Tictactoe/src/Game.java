@@ -71,6 +71,7 @@ public class Game {
 		return this.turns == 8;
 	}
 	
+	// Makes a move into the board
 	public void makeMove(int row, int col) {
 		this.board.get(row).set(col, this.letters[this.activePlayer]);	
 	}
